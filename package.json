@@ -1,0 +1,19 @@
+{
+	"name": "fiflat",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./build/index.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.12",
+		"got": "^12.5.3",
+		"got-scraping": "^3.2.12"
+	},
+	"devDependencies": {
+		"ts-node": "^10.9.1"
+	}
+}
