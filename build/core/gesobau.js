@@ -8,8 +8,8 @@ export class Gesobau {
     async parseAllLatest() {
         console.log('Gesobau');
         const res = await new Nightmare({
-            waitTimeout: 5000,
-            show: true,
+            waitTimeout: 3000,
+            show: false,
         })
             .goto('https://www.gesobau.de/mieten/wohnungssuche.html')
             .evaluate(() => {
@@ -30,8 +30,8 @@ export class Gesobau {
     async parseAllLatestDetails(listOfItems) {
         for (let i = 0; i < listOfItems.length; i++) {
             const res = await new Nightmare({
-                waitTimeout: 5000,
-                show: false,
+                waitTimeout: 3000,
+                show: true,
             })
                 .goto(`https://www.gesobau.de${listOfItems[i]}`)
                 .evaluate(() => {

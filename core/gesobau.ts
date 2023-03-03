@@ -14,7 +14,7 @@ export class Gesobau implements IParse, IExecute {
 		console.log('Gesobau');
 		const res: any = await new Nightmare({
 			waitTimeout: 3000,
-			show: true,
+			show: false,
 		})
 			.goto('https://www.gesobau.de/mieten/wohnungssuche.html')
 			.evaluate(() => {
@@ -38,7 +38,7 @@ export class Gesobau implements IParse, IExecute {
 		for (let i = 0; i < listOfItems.length; i++) {
 			const res: any = await new Nightmare({
 				waitTimeout: 3000,
-				show: false,
+				show: true,
 			})
 				.goto(`https://www.gesobau.de${listOfItems[i]}`)
 				.evaluate(() => {

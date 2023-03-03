@@ -14,7 +14,7 @@ export class Howoge {
     }
     async parseAllLatestDetails(listOfItems) {
         for (let i = 0; i < listOfItems.length; i++) {
-            await sleep(2000);
+            await sleep(1000);
             console.log({
                 price: listOfItems[i].rent,
                 rooms: listOfItems[i].rooms,

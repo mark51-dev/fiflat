@@ -68,7 +68,6 @@ export class Gewobag implements IParse, IExecute {
 				.toLowerCase()
 				.split(' ')
 				.includes('wbs');
-			console.log(wbs);
 
 			console.log({
 				price: price,

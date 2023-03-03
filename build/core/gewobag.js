@@ -47,7 +47,6 @@ export class Gewobag {
                 .toLowerCase()
                 .split(' ')
                 .includes('wbs');
-            console.log(wbs);
             console.log({
                 price: price,
                 rooms: rooms,

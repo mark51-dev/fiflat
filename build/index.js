@@ -3,6 +3,7 @@ import { Degewo } from './core/degewo.js';
 import { Howoge } from './core/howoge.js';
 import { Wbm } from './core/wbm.js';
 import { Gesobau } from './core/gesobau.js';
+// 'Degewo', 'Howoge', 'Gewobag', 'Wbm', 'Gesobau'
 async function run() {
     const websites = ['Degewo', 'Howoge', 'Gewobag', 'Wbm', 'Gesobau'];
     for (let i = 0; i < websites.length; i++) {
