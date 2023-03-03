@@ -12,6 +12,7 @@ export class Gewobag implements IParse, IExecute {
 	}
 
 	async parseAllLatest(): Promise<any[]> {
+		console.log('Gewobag');
 		const res = await got
 			.get(
 				'https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/'
@@ -27,7 +28,6 @@ export class Gewobag implements IParse, IExecute {
 		return links;
 	}
 	async parseAllLatestDetails(listOfItems: any[]): Promise<any> {
-		console.log('Gewobag');
 		for (let i = 0; i < listOfItems.length; i++) {
 			await sleep(1000);
 			const res = await got

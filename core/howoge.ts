@@ -11,6 +11,7 @@ export class Howoge implements IParse, IExecute {
 	}
 
 	async parseAllLatest(): Promise<any[]> {
+		console.log('Howoge');
 		const res: {
 			badges: [];
 			immoobjects: [];
@@ -22,7 +23,6 @@ export class Howoge implements IParse, IExecute {
 		return res.immoobjects;
 	}
 	async parseAllLatestDetails(listOfItems: any[]): Promise<any> {
-		console.log('Howoge');
 		for (let i = 0; i < listOfItems.length; i++) {
 			await sleep(2000);
 

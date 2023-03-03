@@ -6,13 +6,13 @@ export class Howoge {
         await this.parseAllLatestDetails(allItems);
     }
     async parseAllLatest() {
+        console.log('Howoge');
         const res = await got
             .get('https://www.howoge.de/?type=999&tx_howsite_json_list[action]=immoList')
             .json();
         return res.immoobjects;
     }
     async parseAllLatestDetails(listOfItems) {
-        console.log('Howoge');
         for (let i = 0; i < listOfItems.length; i++) {
             await sleep(2000);
             console.log({

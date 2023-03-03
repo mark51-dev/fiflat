@@ -7,6 +7,7 @@ export class Gewobag {
         await this.parseAllLatestDetails(allItems);
     }
     async parseAllLatest() {
+        console.log('Gewobag');
         const res = await got
             .get('https://www.gewobag.de/fuer-mieter-und-mietinteressenten/mietangebote/')
             .text();
@@ -19,7 +20,6 @@ export class Gewobag {
         return links;
     }
     async parseAllLatestDetails(listOfItems) {
-        console.log('Gewobag');
         for (let i = 0; i < listOfItems.length; i++) {
             await sleep(1000);
             const res = await got

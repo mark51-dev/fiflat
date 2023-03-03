@@ -8,6 +8,7 @@ export class Degewo {
         await this.parseAllLatestDetails(allItems);
     }
     async parseAllLatest() {
+        console.log('Degewo');
         const res = await got.get('https://immosuche.degewo.de').text();
         let $ = load(res);
         const links = [];
@@ -18,7 +19,6 @@ export class Degewo {
         return links;
     }
     async parseAllLatestDetails(listOfItems) {
-        console.log('Degewo');
         for (let i = 0; i < listOfItems.length; i++) {
             await sleep(1000);
             const res = await got
